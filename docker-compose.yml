@@ -4,14 +4,10 @@ services:
     build: ./apps/api
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=development
     container_name: extensao-pedro-api
-
   web:
     build: ./apps/web
     ports:
       - "8081:80"
-    depends_on:
-      - api
     container_name: extensao-pedro-web
+

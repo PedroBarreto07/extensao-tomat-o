@@ -20,10 +20,10 @@ jobs:
         run: |
           cd apps/web
           npm ci
-      - name: Build & subir containers com Docker Compose
+      - name: Subir containers Docker Compose
         run: |
           docker compose up -d
-          sleep 15
+          sleep 18  # tempo para containers subirem
       - name: Instalar browsers do Playwright
         run: |
           cd apps/web
@@ -32,6 +32,9 @@ jobs:
         run: |
           cd apps/web
           npm run test:e2e
+      - name: Logs do Docker se falhar
+        if: failure()
+        run: docker compose logs
       - name: Derrubar containers Docker Compose
         if: always()
         run: docker compose down
