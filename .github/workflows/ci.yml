@@ -20,6 +20,10 @@ jobs:
         run: |
           cd apps/web
           npm ci
+      - name: Instalar browsers do Playwright
+        run: |
+          cd apps/web
+          npx playwright install --with-deps
       - name: Testes E2E Web
         run: |
           cd apps/web
