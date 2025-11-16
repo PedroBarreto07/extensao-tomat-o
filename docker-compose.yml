@@ -11,8 +11,7 @@ services:
   web:
     build: ./apps/web
     ports:
-      - "8080:80"
+      - "8081:80"
     depends_on:
       - api
     container_name: extensao-pedro-web
-
