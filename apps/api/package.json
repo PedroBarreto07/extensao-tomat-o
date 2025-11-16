@@ -1,17 +1,19 @@
 {
+  "name": "api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
-  "type": "module",
-  "main": "index.js",
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  },
   "devDependencies": {
     "jest": "^29.7.0",
     "supertest": "^6.3.4"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
   },
   "jest": {
     "testEnvironment": "node",
