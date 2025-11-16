@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extensão Pedro PWA</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#f97316">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Pomodoro PWA 🍅</h1>
+            <button id="themeToggle" class="btn btn-icon">
+                <i class="fas fa-sun"></i>
+            </button>
+        </header>
+
+        <section class="timer-section">
+            <div id="timer" class="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button id="start" class="btn btn-start">
+                    <i class="fas fa-play"></i> Iniciar
+                </button>
+                <button id="pause" class="btn btn-pause">
+                    <i class="fas fa-pause"></i> Pausar
+                </button>
+                <button id="reset" class="btn btn-reset">
+                    <i class="fas fa-undo"></i> Resetar
+                </button>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-header">
+                <h2>Frase do Dia</h2>
+                <div id="apiStatus" class="api-status offline">
+                    <i class="fas fa-circle"></i> API
+                </div>
+            </div>
+            <blockquote id="quoteText" class="quote-text">
+                Carregando frase...
+            </blockquote>
+            <button id="getQuote" class="btn btn-secondary">
+                <i class="fas fa-sync-alt"></i> Nova Frase
+            </button>
+        </section>
+
+        <section class="tools-section">
+            <h2>Ferramentas</h2>
+            <button id="toggleHighlight" class="btn btn-secondary">
+                <i class="fas fa-highlighter"></i> Destacar Links (OFF)
+            </button>
+            <p>Ative para destacar <a href="#">links de exemplo</a> automaticamente.</p>
+        </section>
+
+        <!-- BOTÃO DE INSTALAÇÃO DO PWA -->
+        <button id="btnInstall" class="btn btn-secondary" style="margin-top:20px; display:none;">
+            📥 Instalar App
+        </button>
+
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
