@@ -1,0 +1,22 @@
+# Dependências
+node_modules/
+
+# Resultados de testes e relatórios
+test-results/
+playwright-report/
+coverage/
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
